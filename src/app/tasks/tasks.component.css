@@ -3,3 +3,53 @@ ul {
     padding: 0;
     border-radius: 5px;
 }
+
+/* list items styles */
+
+li.checked {
+    background-color: #e2e2e2 !important;
+    text-decoration: line-through;
+}
+
+li:nth-child(2n) {
+    background-color: #add8e6;
+}
+
+li {
+    padding: 1rem 2.5rem;
+    background-color: #a5ccda;
+}
+
+li span.checkmark::before {
+    content: url('/assets/icons/unchecked_16.png');
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+
+li.checked span.checkmark::before {
+    content: url('/assets/icons/checked_16.png');
+}
+
+span.important::before {
+    content: url('/assets/icons/important_16.png');
+    vertical-align: -8%;
+
+    display: inline-block;
+    margin-right: 0.8rem;
+    height: 1rem;
+}
+
+span.date {
+    margin-left: 0.5rem;
+    background-color: #7899a5;
+    color: #f2f5f6;
+    padding: 1px 4px;
+    border-radius: 4px;
+}
+
+/* li span::after {
+    content: url('/assets/icons/cross_16.png');
+    margin-left: 2rem;
+    vertical-align: middle;
+} */

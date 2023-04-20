@@ -1,1 +1,7 @@
-<p>tasks works!</p>
+<ul>
+    <li *ngFor="let t of tasks" [class.checked]="t.completed">
+        <span class="checkmark"></span>
+        <span [class.important]="t.important">{{t.name}}</span>
+        <span *ngIf="t.deadline instanceof Date" class="date">{{t.deadline | date:'dd.MM.yyyy'}}</span>
+    </li>
+</ul>
