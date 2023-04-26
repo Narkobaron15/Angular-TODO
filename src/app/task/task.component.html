@@ -1,0 +1,11 @@
+<div class="component" (dblclick)="changeImportancy()">
+    <div>
+        <!-- sh**code (double click should be reimplemented) -->
+        <input (dblclick)="changeImportancy()" type="checkbox" [(ngModel)]="completed">
+        <span [class.checked]="task.completed" [class.important]="task.important">{{task.name}}</span>
+        <span *ngIf="isDate(task.deadline)" class="date">{{task.deadline | date:'dd.MM.yyyy'}}</span>
+    </div>
+    <div>
+        <button (click)="deleteBtnClicked()" class="deleteBtn">X</button>
+    </div>
+</div>

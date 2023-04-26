@@ -1,0 +1,34 @@
+button.deleteBtn {
+}
+
+input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+span.important::before {
+    content: url('/assets/icons/important_16.png');
+    vertical-align: -8%;
+
+    display: inline-block;
+    margin-right: 0.8rem;
+    height: 1rem;
+}
+
+span.date {
+    margin-left: 0.5rem;
+    background-color: #7899a5;
+    color: #f2f5f6;
+    padding: 1px 4px;
+    border-radius: 4px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.component {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem 2.5rem;
+}

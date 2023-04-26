@@ -1,7 +1,5 @@
 <ul>
     <li *ngFor="let t of tasks" [class.checked]="t.completed">
-        <span class="checkmark"></span>
-        <span [class.important]="t.important">{{t.name}}</span>
-        <span *ngIf="t.deadline instanceof Date" class="date">{{t.deadline | date:'dd.MM.yyyy'}}</span>
+        <app-task [task]="t" (notifyDelete)="deleteTask(t)"></app-task>
     </li>
 </ul>

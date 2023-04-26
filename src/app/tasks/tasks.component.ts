@@ -21,4 +21,22 @@ export class TasksComponent {
       fetchedData => this.tasks = fetchedData
     );
   }
+
+  deleteTask(task: ITask): void;
+  deleteTask(index: number): void;
+  deleteTask(task: any): void {
+    let index: number | null = 
+    typeof task === 'number' 
+    ? task 
+    : this.isTask(task) 
+      ? this.tasks?.indexOf(task) ?? null
+      : null;
+
+    if (index !== null && index >= 0 && index < this.tasks!.length)
+        this.tasks?.splice(index, 1);
+  }
+
+  private isTask(obj: any): obj is ITask {
+    return 'name' in obj;
+  }
 }
