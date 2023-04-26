@@ -1,3 +1,21 @@
+/* search bar */
+
+nav {
+    display: flex;
+    margin: -2rem 0 2rem 0;
+}
+
+.searchBox {
+    flex-grow: 1;
+}
+
+.searchBox input {
+    padding: 5px 10px;
+    width: 100%;
+}
+
+/* list styles */
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -17,9 +35,3 @@ li:nth-child(2n) {
 li {
     background-color: #a5ccda;
 }
-
-/* li span::after {
-    content: url('/assets/icons/cross_16.png');
-    margin-left: 2rem;
-    vertical-align: middle;
-} */

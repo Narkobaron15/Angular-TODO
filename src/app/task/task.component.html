@@ -6,6 +6,6 @@
         <span *ngIf="isDate(task.deadline)" class="date">{{task.deadline | date:'dd.MM.yyyy'}}</span>
     </div>
     <div>
-        <button (click)="deleteBtnClicked()" class="deleteBtn">X</button>
+        <button (click)="deleteBtnClicked()" class="btn btn-outline-danger deleteBtn">X</button>
     </div>
 </div>

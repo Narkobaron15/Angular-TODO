@@ -1,0 +1,26 @@
+<div class="creationblock">
+    <div class="d-flex">
+        <p class="mb-0 me-3">Create a new task: </p>
+        <form class="d-flex align-items-center">
+            <div>
+                <input placeholder="Enter name..." name="name" [(ngModel)]="task.name">
+            </div>
+            <div class="ms-3">
+                <label for="completed">Completed: </label>
+                <input class="ms-2" type="checkbox" name="completed" [(ngModel)]="task.completed">
+            </div>
+            <div class="ms-3">
+                <label for="importancy">Important: </label>
+                <input type="checkbox" class="ms-2" name="importancy" [(ngModel)]="task.important">
+            </div>
+            <div class="ms-3">
+                <label for="date"></label>
+                <input type="date" class="ms-2" name="date" [(ngModel)]="deadline">
+            </div>
+        </form>
+    </div>
+    <div>
+        <button class="btn btn-danger" (click)="RefreshTask()">Cancel</button>
+        <button class="btn btn-outline-primary ms-2" (click)="AddButtonClick()">Add</button>
+    </div>
+</div>

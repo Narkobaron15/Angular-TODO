@@ -12,7 +12,7 @@ export class TaskComponent {
   @Output() notifyDelete: EventEmitter<void>;
 
   constructor() {
-    this.task = new Task('');
+    this.task = new Task();
     this.notifyDelete = new EventEmitter<void>();
   }
 

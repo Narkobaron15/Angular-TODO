@@ -7,7 +7,7 @@ export interface ITask {
 
 export class Task implements ITask {
     constructor(
-        public name: string,
+        public name: string = '',
         public completed: boolean = false,
         public important: boolean = false,
         public deadline?: Date,

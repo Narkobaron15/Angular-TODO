@@ -1,5 +1,18 @@
+<nav>
+    <div class="searchBox">
+        <input type="text" [(ngModel)]="searchKey"
+            (ngModelChange)="keyUpdated()" placeholder="Search for tasks...">
+    </div>
+    <div class="ms-3">
+        <button class="btn btn-outline-success" (click)="orderPriority()">Order by priority{{currentPriorityOrder | priority}}</button>
+        <button class="btn btn-outline-success ms-1" (click)="orderDeadline()">Order by deadline{{currentDeadlineOrder | priority}}</button>
+    </div>
+</nav>
+
+<app-create-task (onCreation)="addTask($event)"></app-create-task>
+
 <ul>
-    <li *ngFor="let t of tasks" [class.checked]="t.completed">
+    <li *ngFor="let t of orderedTasks" [class.checked]="t.completed">
         <app-task [task]="t" (notifyDelete)="deleteTask(t)"></app-task>
     </li>
 </ul>
